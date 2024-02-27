@@ -33,8 +33,10 @@ export default function Login() {
       });
 
       if (response.data.success) {
-        window.localStorage.setItem("token", response.data.token)
-        window.location.replace("/dashboard")
+        if(typeof window !== 'undefined'){
+          window.localStorage.setItem("token", response.data.token)
+          window.location.replace("/dashboard")
+        }
       } else {
         setError('Invalid credentials. Please try again.'); // Customize error message as needed
       }
