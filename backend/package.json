@@ -1,0 +1,45 @@
+{
+  "name": "lnk-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/app.ts",
+    "dev": "npx nodemon src/app.ts",
+    "build": "tsc",
+    "db:seed": "set e && ts-node src/entities/seeder/seeder.ts",
+    "db:migrate": "set e && ts-node src/entities/migrations/migration.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-group-routes": "^1.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment-timezone": "^0.5.44",
+    "mongodb": "^6.3.0",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.10",
+    "nodemon": "^3.0.2",
+    "redis": "^4.6.13",
+    "reflect-metadata": "^0.2.1",
+    "ts-node": "^10.9.2",
+    "typedi": "^0.10.0",
+    "typeorm": "^0.3.20",
+    "typescript": "^5.3.3",
+    "undici-types": "^6.6.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/jsonwebtoken": "^9.0.5"
+  }
+}
